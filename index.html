@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="https://thumbs.dreamstime.com/z/favicon-icon-website-web-page-internet-icon-favicon-icon-website-web-page-internet-icon-vector-241375178.jpg"> <!--for adding favicon(image at the side of the title) in a webpage-->
+    <meta name="description" content="our coding blog page registration form and login form"><!--meta data for serach engine optimization (seo) description for description of the page, keyword for whatever a person searches matches our keyword better for seo, author name as suggest webpage author name-->
+    <meta name="keyword" content="blog page, registration form, login from">
+    <meta name="author" content="Anitesh Kumar Singh">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog registration page</title>
+</head>
+
+<body>
+    <div>
+        <p><h3>Already Registered? <u>LOGIN</u> now </h3></p>
+        <form action="" method="" name="login">          <!--login form-->
+            <label for="email_login">Email</label>
+            <input type="email" id="email_login" name="email_login" placeholder="abc@gmail.com">
+            <label for="password_login">Password</label>
+            <input type="password" id="password_login" name="password_login">
+            <button type="submit"><img src="https://t4.ftcdn.net/jpg/04/92/55/15/360_F_492551542_UiAoH0DyhL1ZHH9T24masCQZBa95DyW1.jpg" alt="img" height="12px" weidth="50px">Login</button> <!--button tag including image-->
+        </form>
+    </div>
+    <br>
+        <hr>
+        <br>
+        <div>
+            <a href="blogpage.html"><b>Coding Blog Page</b></a><br>  <!--external linking-->
+            <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--oTCqhU8T--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/kfyk4ne0vb187mhh1o95.jpg" alt="I love programming image" height="250px" weidth="100%">
+        </div>
+        <br>
+        <hr>
+        <div>
+
+            <form action="" method="" name="registration">            <!--regitration form-->
+                <caption><U><b>REGISTRATION</b></U></caption>
+                <!--block for firstname and lastname-->
+                <div>                                                 
+                    <label for="firstname">First Name</label><br>
+                    <input type="text" id="firstname" name="firstname" required><br>
+                    <label for="lastname">Last Name</label><br>
+                    <input type="text" id="lastname" name="lastname">
+                </div>
+                <!--block for input of address, made using table-->
+                <div>
+                    <table name="currentaddress">
+                        <tr>
+                            <td rowspan="3">Current Address:</td>
+                            <td><label for="flatno">Flat No./House No.</label></td>
+                            <td> <input type="text" id="flatno" name="flatno"  ></td>
+                        </tr>
+
+                        <tr>
+                            
+                            <td><label for="locality">Locality</label> </td>
+                            <td><input type="text" id="locality" name="locality"  ></td>
+                        </tr>
+
+                        <tr>
+                           
+                            <td><label for="city">City</label> </td>
+                            <td><input type="text" id="city" name="city"  ></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--radio button block for checking the current address and permanent address same-->
+                <div>
+                    <b>
+                        Is Current address and Permanent address same?</b>
+                    <input type="radio" name="add_same" value="yes" checked>Yes 
+                    <input type="radio" name="add_same" value="no" >No 
+                </div>
+                
+                <!--block for input of email and password for registration -->
+                <div>
+                    <table>
+                        <tr>
+                            <td><label for="email_reg">Email:</label></td>
+                            <td><input type="email" id="email_reg" name="eamil_reg" palceholder="abc@gmail.com" required></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="password_reg">Password:</label></td>
+                            <td><input type="password" id="password_reg" name="password_reg" required></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--sibmit button-->
+                <br>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+</body>
+</html>

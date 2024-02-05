@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--different input type, label for form, placeholder -->
+
+    <form>   <!--form tag-paired tag is used to prepare a form, forms are used for collecting data and the collected data is passed further in proper format -->
+
+        <div> <!--for grouping the in line elements-->
+        <label for="username">Username</label>     <!--label (paired tag inline element ) gives a label to the input box of the form, for attribute specifies for which input id label is given -->
+        </div>
+        <div>
+        <input type="text" id="username" required placeholder="username">   <!--input tag is used to provide the input to the form. its a unpaired tag i.e. with no closing braces (inline element)-->
+        </div>                                    <!--type attribute specifies the type os data input, required is the boolean attribute i.e true or false, true means it is necessary fill that section-->
+
+        <div>
+        <label for="password" >Password</label>
+        </div>
+        <div>
+        <input type="password" id="password" required placeholder="*******">  <!-- type value password sepcifies password entry-->
+        </div>
+
+        <!--name and value  form attribute-->
+
+        <div>
+            <label for="email" >Email</label>
+            </div>
+            <div>
+            <input type="email" id="email" name="email" required placeholder="abc@gmail.com">  <!-- type email is usesd to take email values, placeholder attribute is used as a demo of what an field is expecting an input-->
+        </div>
+
+        <div>
+            <label for="country">Country</label><br>        <!--disabled is boolean attriute just like required, is used to disable a field so that the user cannot change the field value  -->
+            <input type="country" id="country" name="country" value="INDIA" disabled>    <!--form has name(specified by us) of the field and value(entered by user) for extracting value form the field we must know name of that field to get the corresponding value-->
+        </div>                                                                 <!--according to the name we get that value. every input field should have name otherwise it will not pass the value further, we can give name using name attribute -->
+                                             <!--we can check the working of name attribute in the url of the page after submitting the form, the name and corresponding value will appear there-->
+        <div>                                        <!--value attribute to give a default value to the field, suppose if the field is unfilled by the user the default value will be submitted, only when that field is accepting value-->
+        <input type="submit">              <!--submit button or submit the form-->
+        </div>
+
+            <!--radiobutton-->
+            <div>
+                <form>
+                    <p>Gender</p>
+                    <input type="radio" name="gender" value="male" checked>Male <br><!--radio type is used to select only one option, name attribute is used to group the radio buttons otherwise every boxes can be selected all at ones-->
+                    <input type="radio" name="gender" value="female">Female <br><!--format of data passing name="value", collecting data for name and its value is "value"-->
+                    <input type="radio" name="gender" value="others">Others<br> <!--checked is a boolean attribute for selecting a default value -->
+                    <input type="submit">
+                </form>                    
+            </div>
+            <!--checkbox-->
+            <div>
+                <form>
+                    <p>Languages</p>
+                    <input type="checkbox" name="language" value="c" checked>C <br> <!--checkbox are used to select more than one option, it is similar to radio button but here input doesnot work for grouping check boxes-->
+                    <input type="checkbox" name="language" value="c++">C++ <br>
+                    <input type="checkbox" name="language" value="java">JAVA<br>
+                    <input type="submit">
+                </form>                    
+            </div>
+
+            <!--dropbox-->
+            <div>
+                <form>
+                    <p>Month</p>
+                    <select name="multi_month" multiple>  <!--select tag is used for dropbox, dropbox is used to select option from multiple options. here multiple is boolean attribute for taking multiple inputs(we can select multiple option using ctrl+select) -->
+                        <option selected>JAN</option>  <!--option tag is used for create every option in dropbox. selected is an boolean attribute for selecting a default value in dropbox -->
+                        <option>FEB</option>
+                        <option>MAR</option>
+                        <option>APR</option>
+                        <option>MAY</option>
+                        <option>JUN</option>
+                        <option>JUL</option>
+                        <option>AUG</option>
+                    </select>
+                </form>
+            </div>
+
+            <div>
+                <form>
+                    <p>Month</p>
+                    <select name="selected_month">
+                        <option selected>JAN</option>
+                        <option>FEB</option>
+                        <option>MAR</option>
+                        <option>APR</option>
+                        <option>MAY</option>
+                        <option>JUN</option>
+                        <option>JUL</option>
+                        <option>AUG</option>
+                    </select>
+                </form>
+            </div>
+          
+            <!--textarea-->
+            <div>                      <!-- textarea tag is used for taking multiple line textual input from the user, rows and cols attribute helps to control the dimension of the textarea. -->
+                <p>Leave a reply</p> <!--input type="text" takes only only line input so text area tag is useful-->
+            <textarea name="reply" rows="10" cols="20">
+
+            </textarea>
+        </div>
+     <!--buttons-->
+
+        <div>
+            <input type="button" value="Button 1"><!--for adding a buuton, but we cannot make an image into a button-->
+        </div>
+
+    <!--button tag-->
+        <div>
+        <button type="button"><img src="https://cdn3.vectorstock.com/i/1000x1000/53/42/user-member-avatar-face-profile-icon-vector-22965342.jpg" alt="profile icon" height="30px" weidth="40px"></button> 
+        <!--type 3 types submit, button, reset to reset the values inside the form, we can add image as an button by using img tag inside the text area and adjust its height and weidth-->
+        </div>
+    
+
+    </form>
+
+    <!--form attribute action, method(value"get")-->
+     <form action="" method="get">    <!--forms collect data and pass that data further passing the data to whom, we can specify that by action attribute by writting the url of the page where the data is to be passed -->
+        <p>Department
+        </p>                        
+        <select name="department" id="">   <!--method:we have to specify the http request method we want to use. suppose a browser(client) request a server there is a http request protocol for this -->
+            <option>CSE</option>            <!--get and post. which type of request is this we have to specify in method value, according to which server response-->
+            <option>IT</option>             <!--get:get request is used to retrive, to get back some data from the server(not making changes in the data base only giving information. the data we submit will become a part of the url)-->
+            <option selected>ECE</option>
+            <option>MECH</option>
+        </select>
+        <br>
+        <input type="submit">
+
+    </form> 
+
+    <!--method="post"-->
+    <form action="" method="post"><!--post:post request is done to make some changes in the data, to save, create some changes around it, update exting data when we send some data to the server. the data of it doesn't become a part of the url. either we can check the data in inspect-network-->
+        <p>Department
+        </p>
+        <select name="college" >
+            <option>KGN</option>
+            <option>HIT</option>
+            <option selected>AEC</option>
+            <option>NSHM</option>
+        </select>
+        <br>
+        <input type="submit">
+
+    </form>
+</body>
+</html>
